@@ -1,3 +1,5 @@
+import Footer from './Components/Footer'
+import Navbar from './Components/Navbar'
 import './globals.css'
 
 export const metadata = {
@@ -11,8 +13,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className='dark'>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
